@@ -1,0 +1,31 @@
+@use "sass:map";
+
+
+// $figma-colors: (
+//     "pink": #FCC0CE,
+//     "light-green": #99E2D0,
+//     "dark-green": #008766,
+//     "light-blue": #89C8FA,
+//     "dark-blue": #003A68,
+//     "purple": #9356DC
+// );
+
+$colors: (
+    "main-purple": #9356DC,
+    "main-pink": #FF79DA,
+    "main-green": #99E2D0
+);
+
+$font-families: (
+    "logo": "Shrikhand",
+    "title": "Shrikhand",
+    "text": "Roboto"
+);
+
+h1 {
+    font-family: map.get($font-families, "logo");
+}
+
+h2 {
+    font-family: 'Roboto';
+}
