@@ -1,12 +1,75 @@
 @use "sass:map";
+@use "sass:color";
 
 @use "global_variables" as gv;
 
+* {
+    font-family: map.get(gv.$font-families, "text");
+    font-size: 16px;
+}
 
-h1 {
-    font-family: map.get(gv.$font-families, "logo");
+body {
+    margin: 0;
 }
 
 h2 {
-    font-family: map.get(gv.$font-families, "text");
+    margin-top: 40px;
+    font-size: 24px;
 }
+
+h3 {
+    font-size: 18px;
+}
+
+header {
+    text-align: center;
+    box-shadow: 0 3px 3px 0 darken(map.get(gv.$colors, "shadow"), 5%);
+    .logo__ohmyfood {
+        object-fit: cover;
+        width: 200px;
+    }
+
+    h1 {
+        margin-bottom: 3px;
+    }
+}
+
+.localisation {
+    color: map.get(gv.$colors, "text-alternative");
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: darken(map.get(gv.$colors, "background"), 5%);
+    .icon__localisation {
+        padding: 17px 17px 0 0;
+    }
+}
+
+.button {
+    padding: 15px;
+    margin: 20px auto 50px auto;
+    text-align: center;
+    color: white;
+    border-style: none;
+    border-radius: 25px;
+    background-image: linear-gradient(
+        map.get(gv.$colors, "main-pink"),
+        map.get(gv.$colors, "main-purple")
+    );
+    box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
+}
+
+.presentation {
+    text-align: center;
+    background-color: map.get(gv.$colors, "background");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 35px 0 35px;
+    p {
+        margin-top: 0;
+        color: map.get(gv.$colors, "text-alternative");
+    }
+}
+
