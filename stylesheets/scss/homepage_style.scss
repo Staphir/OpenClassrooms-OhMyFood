@@ -28,7 +28,7 @@ header {
         object-fit: cover;
         width: 200px;
     }
-
+    
     h1 {
         margin-bottom: 3px;
     }
@@ -53,8 +53,8 @@ header {
     border-style: none;
     border-radius: 25px;
     background-image: linear-gradient(
-        map.get(gv.$colors, "main-pink"),
-        map.get(gv.$colors, "main-purple")
+    map.get(gv.$colors, "main-pink"),
+    map.get(gv.$colors, "main-purple")
     );
     box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
 }
@@ -73,3 +73,65 @@ header {
     }
 }
 
+.card {
+    border-radius: 25px;
+    box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
+    display: flex;
+    
+    &--step {
+        z-index: 0;
+        background-color: map.get(gv.$colors, "background");
+        flex-direction: row;
+        i {
+            color: darken(map.get(gv.$colors, "background"),47%);
+            margin: 22px 25px 0px 30px;
+        }
+        .fa-store {
+            color: map.get(gv.$colors, "main-purple");
+        }
+    }
+    
+    &--restaurant {
+        flex-direction: column;
+        img {
+            width: 340px;
+        }
+    }
+}
+
+.operation {
+    margin: 20px
+}
+
+// .div__box {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+// }
+
+.list__steps {
+    margin-left: -25px;
+    counter-reset: item; /*Remove default style*/
+    list-style: none;
+    // padding-left: 12.5px; /*space between the block and the number*/
+    article {
+        padding-left: 2.5px; /*space between the block and the number*/
+    }
+    li {
+        margin: 25px 0;
+    }
+    li::before {
+        z-index: 1;
+        position: absolute;
+        color: white;
+        background-color: map.get(gv.$colors, "main-purple"); /*Background*/
+        border-radius: 50%; /*make rounded*/
+        padding-right: 5px; /*Space between text and number*/
+        padding-left: 5px; /*Space between text and number*/
+        margin-top: 25px; /*fix the innerspace as needed*/
+        margin-bottom: 16px; /*fix the innerspace as needed*/
+        margin-left: -10px;
+        content: counter(item) ""; /*Count the lines*/
+        counter-increment: item /*apply the counter*/
+    }
+}

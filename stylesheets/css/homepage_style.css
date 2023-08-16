@@ -64,4 +64,58 @@ header h1 {
   color: #353535;
 }
 
+.card {
+  border-radius: 25px;
+  box-shadow: 0px 5px 5px 0px #CECECE;
+  display: flex;
+}
+.card--step {
+  z-index: 0;
+  background-color: #F6F6F6;
+  flex-direction: row;
+}
+.card--step i {
+  color: #7e7e7e;
+  margin: 22px 25px 0px 30px;
+}
+.card--step .fa-store {
+  color: #9356DC;
+}
+.card--restaurant {
+  flex-direction: column;
+}
+.card--restaurant img {
+  width: 340px;
+}
+
+.operation {
+  margin: 20px;
+}
+
+.list__steps {
+  margin-left: -25px;
+  counter-reset: item; /*Remove default style*/
+  list-style: none;
+}
+.list__steps article {
+  padding-left: 2.5px; /*space between the block and the number*/
+}
+.list__steps li {
+  margin: 25px 0;
+}
+.list__steps li::before {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  background-color: #9356DC; /*Background*/
+  border-radius: 50%; /*make rounded*/
+  padding-right: 5px; /*Space between text and number*/
+  padding-left: 5px; /*Space between text and number*/
+  margin-top: 25px; /*fix the innerspace as needed*/
+  margin-bottom: 16px; /*fix the innerspace as needed*/
+  margin-left: -10px;
+  content: counter(item) ""; /*Count the lines*/
+  counter-increment: item;
+}
+
 /*# sourceMappingURL=homepage_style.css.map */
