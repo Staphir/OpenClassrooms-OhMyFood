@@ -12,6 +12,10 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-family: map.get(gv.$font-families, "title");
+}
+
 h2 {
     margin-top: 40px;
     font-size: 24px;
@@ -21,11 +25,19 @@ h3 {
     font-size: 18px;
 }
 
+img {
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 header {
     text-align: center;
     box-shadow: 0 3px 3px 0 darken(map.get(gv.$colors, "shadow"), 5%);
     .logo__ohmyfood {
-        object-fit: cover;
         width: 200px;
     }
     
@@ -77,7 +89,25 @@ header {
     border-radius: 25px;
     box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
     display: flex;
-    
+    .card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 16px 20px 0 10px;
+        .card-text {
+            h3 {
+                margin: 0;
+            }
+            display: block;
+            p {
+                margin: 5px 0 20px 0;
+            }
+        }
+        .fa-heart {
+            margin-top: 23px;
+        }
+    }
+
     &--step {
         z-index: 0;
         background-color: map.get(gv.$colors, "background");
@@ -89,25 +119,24 @@ header {
         .fa-store {
             color: map.get(gv.$colors, "main-purple");
         }
+        
     }
     
     &--restaurant {
         flex-direction: column;
+        margin-bottom: 18px;
         img {
-            width: 340px;
+            height: 231px;
+            width: 100%;
+            border-radius: 25px 25px 0 0;
         }
     }
 }
 
 .operation {
-    margin: 20px
+    margin: 20px;
+    padding-bottom: 10px;
 }
-
-// .div__box {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-// }
 
 .list__steps {
     margin-left: -25px;
@@ -133,5 +162,56 @@ header {
         margin-left: -10px;
         content: counter(item) ""; /*Count the lines*/
         counter-increment: item /*apply the counter*/
+    }
+}
+
+.restaurants {
+    padding: 10px 10px 40px 10px;
+    background-color: map.get(gv.$colors, "background");
+}
+
+.div__box {
+    display: flex;
+    flex-direction: column;
+    &--restaurant {
+        z-index: 0;
+    }
+    .logo-new {
+        z-index: 1;
+        position: absolute;
+        margin-top: 13px;
+        margin-left: calc(100% - 123px);
+        rect {
+            fill: map.get(gv.$colors, "main-green");
+            stroke: map.get(gv.$colors, "main-green");
+        }
+        text {
+            fill: map.get(gv.$colors, "text-green");
+        }
+    }
+}
+
+footer {
+    h1 {
+        font-size: 18px;
+    }
+    .list__footer {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        padding-bottom: 8px;
+    }
+    padding: 15px 0px 8px 25px;
+    background-color: map.get(gv.$colors, "text-alternative");
+    color: white;
+    .fa-utensils {
+        margin-right: 9px;
+    }
+    .fa-handshake-angle {
+        margin-right: 5px;
+    }
+    a {
+        color: white;
     }
 }

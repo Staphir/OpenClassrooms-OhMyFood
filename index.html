@@ -16,8 +16,7 @@
 
 <body>
     <header>
-        <!-- <h1>ohmyfood</h1> -->
-        <h1><img class="logo__ohmyfood" src="images/logo/ohmyfood.png" alt="Logo ohmyfood"></h1>
+        <img class="logo__ohmyfood" src="images/logo/ohmyfood.png" alt="Logo ohmyfood">
     </header>
     
     <main>
@@ -61,18 +60,20 @@
         
         <section class="restaurants">
             <h2>Restaurants</h2>
-            <div class="div_box div__box--restaurants">
+            <div class="div__box div__box--restaurants">
                 <a href="./menu_la_palette.html">
                     <article class="card card--restaurant">
                         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat du restaurant La palette du goût">
                         <svg class="logo-new" width="80" height="30">
                             <rect x="0" y="0" rx="4" ry="4" width="80" height="30"/>
-                            <text x="10" y="20" fill="#008766">Nouveau</text>
+                            <text x="10" y="20">Nouveau</text>
                         </svg>
                         <div class="card-content">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p> <!--ou h4 ?-->
-                            <i class="fa-solid fa-heart"></i> <!--Coeur plein-->
+                            <div class="card-text">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p> <!--ou h4 ?-->
+                            </div>
+                            <i class="fa-solid fa-heart fa-xl"></i>
                             <!-- <i class="fa-regular fa-heart"></i> Coeur vide -->
                         </div>
                     </article>
@@ -85,8 +86,10 @@
                             <text x="10" y="20" fill="#008766">Nouveau</text>
                         </svg>
                         <div class="card-content">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
+                            <div class="card-text">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
                             <i class="fa-solid fa-heart"></i>
                         </div>
                     </article>
@@ -95,8 +98,10 @@
                     <article class="card card--restaurant">
                         <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo d'un plat du restaurant À la française">
                         <div class="card-content">
-                            <h3>À la française</h3>
-                            <p>Cité Rouge</p>
+                            <div class="card-text">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
                             <i class="fa-solid fa-heart"></i>
                         </div>
                     </article>
@@ -105,8 +110,10 @@
                     <article class="card card--restaurant">
                         <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo d'un plat du restaurant Le délice des sens">
                         <div class="card-content">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
+                            <div class="card-text">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
                             <i class="fa-solid fa-heart"></i>
                         </div>
                     </article>
@@ -116,14 +123,14 @@
     </main>
     
     <footer>
-        <h3><img src="images/logo/ohmyfood.png" alt="Logo ohmyfood"></h3>
-        <ul class="list-footer">
+        <h1>ohmyfood</h1>
+        <ul class="list__footer">
             <li>
-                <i class="fa-solid fa-utensils"></i>
+                <i class="fa-solid fa-utensils fa-xs"></i>
                 Proposer un restaurant
             </li>
             <li>
-                <i class="fa-solid fa-handshake-angle"></i>
+                <i class="fa-solid fa-handshake-angle fa-xs"></i>
                 Devenir partenaire
             </li>
             <li>

@@ -7,6 +7,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-family: "Shrikhand";
+}
+
 h2 {
   margin-top: 40px;
   font-size: 24px;
@@ -16,12 +20,20 @@ h3 {
   font-size: 18px;
 }
 
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 header {
   text-align: center;
   box-shadow: 0 3px 3px 0 #c1c1c1;
 }
 header .logo__ohmyfood {
-  object-fit: cover;
   width: 200px;
 }
 header h1 {
@@ -69,6 +81,24 @@ header h1 {
   box-shadow: 0px 5px 5px 0px #CECECE;
   display: flex;
 }
+.card .card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 16px 20px 0 10px;
+}
+.card .card-content .card-text {
+  display: block;
+}
+.card .card-content .card-text h3 {
+  margin: 0;
+}
+.card .card-content .card-text p {
+  margin: 5px 0 20px 0;
+}
+.card .card-content .fa-heart {
+  margin-top: 23px;
+}
 .card--step {
   z-index: 0;
   background-color: #F6F6F6;
@@ -83,13 +113,17 @@ header h1 {
 }
 .card--restaurant {
   flex-direction: column;
+  margin-bottom: 18px;
 }
 .card--restaurant img {
-  width: 340px;
+  height: 231px;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
 }
 
 .operation {
   margin: 20px;
+  padding-bottom: 10px;
 }
 
 .list__steps {
@@ -116,6 +150,57 @@ header h1 {
   margin-left: -10px;
   content: counter(item) ""; /*Count the lines*/
   counter-increment: item;
+}
+
+.restaurants {
+  padding: 10px 10px 40px 10px;
+  background-color: #F6F6F6;
+}
+
+.div__box {
+  display: flex;
+  flex-direction: column;
+}
+.div__box--restaurant {
+  z-index: 0;
+}
+.div__box .logo-new {
+  z-index: 1;
+  position: absolute;
+  margin-top: 13px;
+  margin-left: calc(100% - 123px);
+}
+.div__box .logo-new rect {
+  fill: #99E2D0;
+  stroke: #99E2D0;
+}
+.div__box .logo-new text {
+  fill: #008766;
+}
+
+footer {
+  padding: 15px 0px 8px 25px;
+  background-color: #353535;
+  color: white;
+}
+footer h1 {
+  font-size: 18px;
+}
+footer .list__footer {
+  list-style: none;
+  padding-left: 0;
+}
+footer li {
+  padding-bottom: 8px;
+}
+footer .fa-utensils {
+  margin-right: 9px;
+}
+footer .fa-handshake-angle {
+  margin-right: 5px;
+}
+footer a {
+  color: white;
 }
 
 /*# sourceMappingURL=homepage_style.css.map */
