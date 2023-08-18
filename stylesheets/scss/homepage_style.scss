@@ -2,6 +2,7 @@
 @use "sass:color";
 
 @use "global_variables" as gv;
+@use "global_components" as gc;
 
 * {
     font-family: map.get(gv.$font-families, "text");
@@ -35,15 +36,8 @@ a {
 }
 
 header {
-    text-align: center;
+    @include gc.header;
     box-shadow: 0 3px 3px 0 darken(map.get(gv.$colors, "shadow"), 5%);
-    .logo__ohmyfood {
-        width: 200px;
-    }
-    
-    h1 {
-        margin-bottom: 3px;
-    }
 }
 
 .localisation {
@@ -58,17 +52,7 @@ header {
 }
 
 .button {
-    padding: 15px;
-    margin: 20px auto 50px auto;
-    text-align: center;
-    color: white;
-    border-style: none;
-    border-radius: 25px;
-    background-image: linear-gradient(
-    map.get(gv.$colors, "main-pink"),
-    map.get(gv.$colors, "main-purple")
-    );
-    box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
+    @include gc.button
 }
 
 .presentation {
@@ -86,28 +70,14 @@ header {
 }
 
 .card {
-    border-radius: 25px;
-    box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
-    display: flex;
+    @include gc.card;
     .card-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         margin: 16px 20px 0 10px;
-        .card-text {
-            h3 {
-                margin: 0;
-            }
-            display: block;
-            p {
-                margin: 5px 0 20px 0;
-            }
-        }
-        .fa-heart {
-            margin-top: 23px;
-        }
     }
-
+    p {
+        margin: 5px 0 20px 0;
+    }
+    
     &--step {
         z-index: 0;
         background-color: map.get(gv.$colors, "background");
@@ -192,26 +162,5 @@ header {
 }
 
 footer {
-    h1 {
-        font-size: 18px;
-    }
-    .list__footer {
-        list-style: none;
-        padding-left: 0;
-    }
-    li {
-        padding-bottom: 8px;
-    }
-    padding: 15px 0px 8px 25px;
-    background-color: map.get(gv.$colors, "text-alternative");
-    color: white;
-    .fa-utensils {
-        margin-right: 9px;
-    }
-    .fa-handshake-angle {
-        margin-right: 5px;
-    }
-    a {
-        color: white;
-    }
+    @include gc.footer;
 }

@@ -1,3 +1,180 @@
+/****************** A regrouper ******************/
+* {
+  font-family: "Roboto";
+  font-size: 16px;
+}
 
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+header .logo__ohmyfood {
+  width: 200px;
+}
+header a {
+  padding-top: 8px;
+  padding-left: 17px;
+}
+header .logo__ohmyfood {
+  margin-left: calc(50% - 145.5px);
+}
+
+.img-presentation {
+  height: 275px;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+  display: block;
+}
+
+.menu {
+  background-color: #F6F6F6;
+  margin-top: -55px;
+  border-radius: 25px 25px 0 0;
+  z-index: 1;
+}
+
+.div__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 32px 40px 0px 17px;
+}
+.div__title h2 {
+  margin: 0;
+  font-family: "Shrikhand";
+}
+.div__title i {
+  padding-top: 17px;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px 0px #CECECE;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 12px;
+}
+.card .card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card .card-content .card-text {
+  display: block;
+}
+.card .card-content .card-text h3 {
+  margin: 0;
+}
+.card .card-content .fa-heart {
+  margin-top: 23px;
+}
+.card h4 {
+  margin: 10px 0px 5px 15px;
+}
+.card p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.card .description {
+  margin-left: 15px;
+}
+.card .price {
+  margin-right: 15px;
+}
+
+.list__menu {
+  margin: 0px 13px 0px 13px;
+}
+.list__menu h3 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.list__dishes {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.underline-category {
+  stroke: #99E2D0;
+  stroke-width: 3px;
+  margin-bottom: 12px;
+}
+
+.div__commander {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button {
+  padding: 15px;
+  margin: 20px auto 50px auto;
+  text-align: center;
+  color: white;
+  border-style: none;
+  border-radius: 25px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 5px 5px 0px #CECECE;
+  width: 186px;
+}
+
+footer {
+  padding: 15px 0px 8px 25px;
+  background-color: #353535;
+  color: white;
+}
+footer h1 {
+  font-size: 18px;
+}
+footer .list__footer {
+  list-style: none;
+  padding-left: 0;
+}
+footer li {
+  padding-bottom: 8px;
+}
+footer .fa-utensils {
+  margin-right: 9px;
+}
+footer .fa-handshake-angle {
+  margin-right: 5px;
+}
+footer a {
+  color: white;
+}
 
 /*# sourceMappingURL=menu_style.css.map */

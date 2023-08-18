@@ -1,0 +1,72 @@
+@use "sass:map";
+
+@use "global_variables" as gv;
+
+
+@mixin header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+    .logo__ohmyfood {
+        width: 200px;
+    }
+}
+
+@mixin button {
+    padding: 15px;
+    margin: 20px auto 50px auto;
+    text-align: center;
+    color: white;
+    border-style: none;
+    border-radius: 25px;
+    background-image: linear-gradient(
+    map.get(gv.$colors, "main-pink"),
+    map.get(gv.$colors, "main-purple")
+    );
+    box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
+}
+
+@mixin card {
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
+    display: flex;
+    .card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .card-text {
+            h3 {
+                margin: 0;
+            }
+            display: block;
+        }
+        .fa-heart {
+            margin-top: 23px;
+        }
+    }
+}
+
+@mixin footer {
+    h1 {
+        font-size: 18px;
+    }
+    .list__footer {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        padding-bottom: 8px;
+    }
+    padding: 15px 0px 8px 25px;
+    background-color: map.get(gv.$colors, "text-alternative");
+    color: white;
+    .fa-utensils {
+        margin-right: 9px;
+    }
+    .fa-handshake-angle {
+        margin-right: 5px;
+    }
+    a {
+        color: white;
+    }
+}

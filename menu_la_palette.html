@@ -16,11 +16,8 @@
 
 <body>
     <header>
-        <nav>
-            <a href="./index.html"><i class="fa-solid fa-arrow-left"></i></a>
-            <!-- <h1>ohmyfood</h1> -->
-            <h1><img src="images/logo/ohmyfood.png" alt="Logo ohmyfood"></h1>
-        </nav>
+        <a href="./index.html"><i class="fa-solid fa-arrow-left fa-xl"></i></a>
+        <img class="logo__ohmyfood" src="images/logo/ohmyfood.png" alt="Logo ohmyfood">
     </header>
     <main>
         <img class="img-presentation" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo d'un plat du restaurant La palette du goût">
@@ -28,94 +25,106 @@
         <section class="menu">
             <div class="div__title div__title--restaurant">
                 <h2>La palette du goût</h2>
-                <i class="fa-solid fa-heart"></i>
+                <i class="fa-regular fa-heart fa-xl"></i>
             </div>
             <div class="list__menu">
                 <div class="list__dishes list__dishes--entrees">
                     <h3>ENTRÉES</h3>
+                    <svg height="17" width="40">
+                        <line class="underline-category" x1="0" y1="7" x2="40" y2="7"/>
+                    </svg>
                     <article class="card card--dish">
                         <h4 class="name-dish">Fricassée d'escargots</h4>
                         <div class="card-content">
-                            <p class="ingredient">Au piment d'Espelette</p>
+                            <p class="description">Au piment d'Espelette</p>
                             <p class="price">25<span class="euro">€</span></p>
                         </div>
                     </article>
                     <article class="card card--dish">
                         <h4 class="name-dish">Foie gras de canard mi-cuit</h4>
                         <div class="card-content">
-                            <p class="ingredient">Et ses copeaux de truffe noire</p>
+                            <p class="description">Et ses copeaux de truffe noire</p>
                             <p class="price">35<span class="euro">€</span></p>
                         </div>
                     </article>
                     <article class="card card--dish">
                         <h4 class="name-dish">Œuf au plat</h4>
                         <div class="card-content">
-                            <p class="ingredient">Assaisonné à la truffe sur lit de caviar</p>
+                            <p class="description">Assaisonné à la truffe sur lit de caviar</p>
                             <p class="price">20<span class="euro">€</span></p>
                         </div>
                     </article>
                 </div>
                 <div class="list__dishes list__dishes--dishes">
                     <h3>PLATS</h3>
+                    <svg height="17" width="40">
+                        <line class="underline-category" x1="0" y1="7" x2="40" y2="7"/>
+                    </svg>
                     <article class="card card--dish">
                         <h4 class="name-dish">Filet de bœuf aux herbes</h4>
                         <div class="card-content">
-                            <p class="ingredient">Accompagné de sa ribambelle de légumes</p>
+                            <p class="description">Accompagné de sa ribambelle de légumes</p>
                             <p class="price">40<span class="euro">€</span></p>
                         </div>
                     </article>
                     <article class="card card--dish">
                         <h4 class="name-dish">Parmentier de queue de bœuf</h4>
                         <div class="card-content">
-                            <p class="ingredient">À la truffe noire sur sa purée de panais</p>
+                            <p class="description">À la truffe noire sur sa purée de panais</p>
                             <p class="price">35<span class="euro">€</span></p>
                         </div>
                     </article>
                     <article class="card card--dish">
                         <h4 class="name-dish">Filet de turbot</h4>
                         <div class="card-content">
-                            <p class="ingredient">Aux agrumes</p>
+                            <p class="description">Aux agrumes</p>
                             <p class="price">44<span class="euro">€</span></p>
                         </div>
                     </article>
                 </div>
                 <div class="list__dishes list__dishes--desserts">
                     <h3>DESSERTS</h3>
+                    <svg height="17" width="40">
+                        <line class="underline-category" x1="0" y1="7" x2="40" y2="7"/>
+                    </svg>
                     <article class="card card--dish">
                         <h4 class="name-dish">Paris-Brest</h4>
                         <div class="card-content">
-                            <p class="ingredient">Revisité</p>
+                            <p class="description">Revisité</p>
                             <p class="price">18<span class="euro">€</span></p>
                         </div>
                     </article>
                     <article class="card card--dish">
                         <h4 class="name-dish">Macaron au chocolat d'exception</h4>
                         <div class="card-content">
-                            <p class="ingredient">Et glace à la vanille de Madagascar</p>
+                            <p class="description">Et glace à la vanille de Madagascar</p>
                             <p class="price">22<span class="euro">€</span></p>
                         </div>
                     </article>
                     <article class="card card--dish">
                         <h4 class="name-dish">Mousse au chocolat</h4>
                         <div class="card-content">
-                            <p class="ingredient">Au piment d'Espelette et à la truffe noire</p>
+                            <p class="description">Au piment d'Espelette et à la truffe noire</p>
                             <p class="price">23<span class="euro">€</span></p>
                         </div>
                     </article>
                 </div>
             </div>
-            <button class="button" type="button">Commander</button>
+            <div class="div__commander">
+                <button class="button" type="button">Commander</button>
+            </div>
         </section>
     </main>
+    
     <footer>
-        <h2><img src="images/logo/ohmyfood.png" alt="Logo ohmyfood"></h2>
-        <ul class="list-footer">
+        <h1>ohmyfood</h1>
+        <ul class="list__footer">
             <li>
-                <i class="fa-solid fa-utensils"></i>
+                <i class="fa-solid fa-utensils fa-xs"></i>
                 Proposer un restaurant
             </li>
             <li>
-                <i class="fa-solid fa-handshake-angle"></i>
+                <i class="fa-solid fa-handshake-angle fa-xs"></i>
                 Devenir partenaire
             </li>
             <li>
