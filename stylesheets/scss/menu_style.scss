@@ -113,6 +113,57 @@ header {
 .list__dishes {
     margin-top: 40px;
     margin-bottom: 40px;
+    &--starters{
+        animation: starters-apparition 5s;
+    }
+    &--dishes {
+        animation: dishes-apparition 5s;
+    }
+    &--desserts {
+        animation: desserts-apparition 5s;
+    }
+}
+
+@keyframes starters-apparition {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    33% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    // translate
+}
+
+@keyframes dishes-apparition {
+    0% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    66% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    // translate
+}
+
+@keyframes desserts-apparition {
+    0% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    // translate
 }
 
 .underline-category {
