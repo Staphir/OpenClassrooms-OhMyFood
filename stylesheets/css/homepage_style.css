@@ -29,7 +29,50 @@ a {
   color: black;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border: 20px solid #CECECE;
+  border-radius: 50%;
+  border-top: 20px solid #9356DC;
+  border-bottom: 20px solid #FF79DA;
+  width: 100px;
+  height: 100px;
+  animation: spinner 3s linear;
+  opacity: 0;
+  display: inline;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
+  animation: apparition 4s;
   padding-top: 20px;
   padding-bottom: 10px;
   text-align: center;
@@ -37,6 +80,10 @@ header {
 }
 header .logo__ohmyfood {
   width: 200px;
+}
+
+main {
+  animation: apparition 4s;
 }
 
 .localisation {
@@ -185,6 +232,7 @@ header .logo__ohmyfood {
 }
 
 footer {
+  animation: apparition 4s;
   padding: 15px 0px 8px 25px;
   background-color: #353535;
   color: white;

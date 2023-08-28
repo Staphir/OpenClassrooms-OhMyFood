@@ -35,9 +35,58 @@ a {
     color: black;
 }
 
+.loader {
+    position: fixed;
+    top :0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: 20px solid map.get(gv.$colors, "shadow");
+    border-radius: 50%;
+    border-top: 20px solid map.get(gv.$colors, "main-purple");;
+    border-bottom: 20px solid map.get(gv.$colors, "main-pink");;
+    width: 100px;
+    height: 100px;
+    animation: spinner 3s linear;
+    opacity: 0;
+    display: inline;
+}
+
+@keyframes spinner {
+    0% { 
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% { 
+        transform: rotate(360deg); 
+        opacity: 0;
+    }
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 header {
+    animation: apparition 4s;
     @include gc.header;
     box-shadow: 0 3px 3px 0 darken(map.get(gv.$colors, "shadow"), 5%);
+}
+
+main {
+    animation: apparition 4s;
 }
 
 .localisation {
@@ -162,5 +211,6 @@ header {
 }
 
 footer {
+    animation: apparition 4s;
     @include gc.footer;
 }
