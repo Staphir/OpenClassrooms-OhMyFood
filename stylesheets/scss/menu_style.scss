@@ -76,9 +76,6 @@ header {
         margin: 0;
         font-family: map.get(gv.$font-families, "title");
     }
-    i {
-        padding-top: 17px;
-    }
 }
 
 .card {
@@ -133,7 +130,6 @@ header {
         opacity: 1;
         transform: translateX(0%);
     }
-    // translate
 }
 
 @keyframes dishes-apparition {
@@ -181,6 +177,10 @@ header {
 .button {
     @include gc.button;
     width: 186px;
+}
+
+.checkbox__heart {
+    @include gc.checkbox__heart;
 }
 
 footer {

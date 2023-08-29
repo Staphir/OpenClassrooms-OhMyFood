@@ -210,6 +210,10 @@ main {
     }
 }
 
+.checkbox__heart {
+    @include gc.checkbox__heart;
+}
+
 footer {
     animation: apparition 4s;
     @include gc.footer;

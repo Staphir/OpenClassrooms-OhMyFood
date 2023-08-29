@@ -143,9 +143,6 @@ main {
 .card .card-content .card-text h3 {
   margin: 0;
 }
-.card .card-content .fa-heart {
-  margin-top: 23px;
-}
 .card .card-content {
   margin: 16px 20px 0 10px;
 }
@@ -229,6 +226,25 @@ main {
 }
 .div__box .logo-new text {
   fill: #008766;
+}
+
+.checkbox__heart {
+  padding-top: 10px;
+}
+.checkbox__heart input[type=checkbox],
+.checkbox__heart .checked {
+  display: none;
+}
+.checkbox__heart input[type=checkbox]:checked ~ .checked {
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -text-fill-color: transparent;
+  display: initial;
+}
+.checkbox__heart input[type=checkbox]:checked ~ .unchecked {
+  display: none;
 }
 
 footer {

@@ -13,8 +13,6 @@
     }
 }
 
-
-
 @mixin button {
     padding: 15px;
     margin: 20px auto 50px auto;
@@ -28,21 +26,8 @@
     );
     box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
     transition: all 500ms;
-    // @keyframes button-hover-animation {
-    //     0% {background: linear-gradient(
-    //         map.get(gv.$colors, "main-pink"),
-    //         map.get(gv.$colors, "main-purple"));
-    //         box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
-    //     }
-    //     100% {background    : linear-gradient(
-    //         lighten(map.get(gv.$colors, "main-pink"), 10%),
-    //         lighten(map.get(gv.$colors, "main-purple"), 10%));
-    //         box-shadow: 1px 5px 7px 2px map.get(gv.$colors, "shadow");
-    //     }
-    // }
-
+    
     &:hover {
-        // animation: button-hover-animation 3s infinite;
         opacity: 80%;
         box-shadow: 0px 3px 10px 5px darken(map.get(gv.$colors, "shadow"), 5%);
     }
@@ -61,9 +46,6 @@
                 margin: 0;
             }
             display: block;
-        }
-        .fa-heart {
-            margin-top: 23px;
         }
     }
 }
@@ -90,5 +72,28 @@
     }
     a {
         color: white;
+    }
+}
+
+@mixin checkbox__heart {
+    padding-top: 10px;
+    input[type="checkbox"],
+    .checked {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .checked {
+        background: linear-gradient(
+        0deg,
+        map.get(gv.$colors, "main-purple"),
+        map.get(gv.$colors, "main-pink")
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -text-fill-color: transparent;
+        display: initial;
+    }
+    input[type="checkbox"]:checked ~ .unchecked {
+        display: none;
     }
 }
