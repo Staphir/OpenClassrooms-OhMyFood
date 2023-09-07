@@ -229,22 +229,39 @@ main {
 }
 
 .checkbox__heart {
-  padding-top: 10px;
+  margin-right: 20px;
 }
-.checkbox__heart input[type=checkbox],
+.checkbox__heart input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox__heart .checked,
+.checkbox__heart .unchecked {
+  position: absolute;
+}
+.checkbox__heart .unchecked {
+  padding-top: 18px;
+  z-index: 1;
+  opacity: 1;
+}
 .checkbox__heart .checked {
-  display: none;
+  transform-origin: 10px center;
+  padding-top: 4.5px;
+  z-index: 2;
+  opacity: 0;
 }
 .checkbox__heart input[type=checkbox]:checked ~ .checked {
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -text-fill-color: transparent;
-  display: initial;
+  animation: heart-filling 600ms forwards;
 }
-.checkbox__heart input[type=checkbox]:checked ~ .unchecked {
-  display: none;
+@keyframes heart-filling {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 footer {
@@ -271,6 +288,63 @@ footer .fa-handshake-angle {
 }
 footer a {
   color: white;
+}
+
+@media (min-width: 1024px) {
+  .presentation h2 {
+    font-size: 40px;
+  }
+  .operation {
+    margin-right: 180px;
+    margin-left: 180px;
+  }
+  .list__steps {
+    display: flex;
+    justify-content: space-between;
+  }
+  .list__steps li {
+    width: 30%;
+  }
+  .restaurants h2 {
+    margin-right: 180px;
+    margin-left: 180px;
+  }
+  .restaurants .div__box {
+    margin-right: 180px;
+    margin-left: 180px;
+  }
+  .div__box {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .div__box a {
+    width: 45%;
+  }
+  .div__box .logo-new {
+    position: absolute;
+    margin-left: calc(100% - 463px);
+  }
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+  footer h1 {
+    margin-left: 25px;
+    margin-right: 80px;
+  }
+  footer .list__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;
+  }
+  footer .list__footer li {
+    margin-right: 15px;
+  }
+  footer .list__footer li:nth-child(2) {
+    margin-right: 50px;
+  }
 }
 
 /*# sourceMappingURL=homepage_style.css.map */

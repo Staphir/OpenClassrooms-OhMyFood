@@ -218,3 +218,50 @@ footer {
     animation: apparition 4s;
     @include gc.footer;
 }
+
+@media (min-width: 1024px) {
+    .presentation h2 {
+        font-size: 40px;
+    }
+
+    .operation {
+        margin-right: 180px;
+        margin-left: 180px;
+    }
+
+    .list__steps {
+        display: flex;
+        justify-content: space-between;
+        li {
+            width: 30%;
+        }
+    }
+
+    .restaurants {
+        h2 {
+            margin-right: 180px;
+            margin-left: 180px;
+        }
+        .div__box {
+            margin-right: 180px;
+            margin-left: 180px;
+        }
+    }
+
+    .div__box {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        a {
+            width: 45%;
+        }
+        .logo-new {
+            position: absolute;
+            margin-left: calc(100% - 463px);
+        }
+    }
+
+    footer {
+        @include gc.footer__desktop;
+    }
+}

@@ -75,25 +75,104 @@
     }
 }
 
+@mixin footer__desktop {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    h1 {
+        margin-left: 25px;
+        margin-right: 80px;
+    }
+    .list__footer {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 50px;
+        li {
+            margin-right: 15px;
+        }
+        li:nth-child(2){
+            margin-right: 50px;
+        }
+    }
+}
+
+// @mixin checkbox__heart {
+//     input[type="checkbox"]
+//     {
+//         position: absolute;
+//         opacity: 0;
+//     }
+//     .checked,
+//     .unchecked {
+//         position: absolute;
+//     }
+//     .unchecked {
+//         z-index: 1;
+//         opacity: 1;
+//     }
+//     .checked {
+//         z-index: 2;
+//         opacity: 0;
+//         background: linear-gradient(
+//             0deg,
+//             #FF79DA,
+//             #9356DC
+//             );
+//             -webkit-background-clip: text;
+//             background-clip: text;
+//             -webkit-text-fill-color: transparent; // !!!
+//             -text-fill-color: transparent;
+//     }
+//     input[type="checkbox"]:checked ~ .checked {
+//         animation: heart-filling 1s forwards;
+//     }
+    
+//     @keyframes heart-filling {
+//         from {
+//             opacity: 0;
+//             transform: scale(0);
+//         }
+//         to {
+//             opacity: 1;
+//             transform: scale(1);
+//         }
+//     }
+// }
+
 @mixin checkbox__heart {
-    padding-top: 10px;
-    input[type="checkbox"],
+    margin-right: 20px;
+    input[type="checkbox"]
+    {
+        position: absolute;
+        opacity: 0;
+    }
+    .checked,
+    .unchecked {
+        position: absolute;
+    }
+    .unchecked {
+        padding-top: 18px;
+        z-index: 1;
+        opacity: 1;
+    }
     .checked {
-        display: none;
+        transform-origin: 10px center;
+        padding-top: 4.5px;
+        z-index: 2;
+        opacity: 0;
     }
     input[type="checkbox"]:checked ~ .checked {
-        background: linear-gradient(
-        0deg,
-        map.get(gv.$colors, "main-purple"),
-        map.get(gv.$colors, "main-pink")
-        );
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -text-fill-color: transparent;
-        display: initial;
+        animation: heart-filling 600ms forwards;
     }
-    input[type="checkbox"]:checked ~ .unchecked {
-        display: none;
+    
+    @keyframes heart-filling {
+        from {
+            opacity: 0;
+            transform: scale(0);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
 }
