@@ -34,6 +34,7 @@
 }
 
 @mixin card {
+    position: relative;
     border-radius: 15px;
     box-shadow: 0px 5px 5px 0px map.get(gv.$colors, "shadow");
     display: flex;

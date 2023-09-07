@@ -198,8 +198,10 @@ main {
     .logo-new {
         z-index: 1;
         position: absolute;
-        margin-top: 13px;
-        margin-left: calc(100% - 123px);
+        top: 15px;
+        right: 15px;
+        // margin-top: 13px;
+        // margin-left: calc(100% - 123px);
         rect {
             fill: map.get(gv.$colors, "main-green");
             stroke: map.get(gv.$colors, "main-green");

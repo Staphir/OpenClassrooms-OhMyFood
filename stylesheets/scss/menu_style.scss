@@ -114,9 +114,11 @@ header {
         display: inline-grid;
         width: calc(100%);
         margin-right: 15px;
-        text-wrap: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
 }
 

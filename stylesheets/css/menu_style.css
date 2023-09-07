@@ -76,6 +76,7 @@ header .logo__ohmyfood {
 }
 
 .card {
+  position: relative;
   border-radius: 15px;
   box-shadow: 0px 5px 5px 0px #CECECE;
   display: flex;
@@ -121,7 +122,9 @@ header .logo__ohmyfood {
   display: inline-grid;
   width: 100%;
   margin-right: 15px;
-  text-wrap: nowrap;
+}
+.card .card-text p {
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
