@@ -159,11 +159,10 @@ main {
 
 .list__steps {
     margin-left: -25px;
-    counter-reset: item; /*Remove default style*/
+    counter-reset: item;
     list-style: none;
-    // padding-left: 12.5px; /*space between the block and the number*/
     article {
-        padding-left: 2.5px; /*space between the block and the number*/
+        padding-left: 2.5px;
     }
     li {
         margin: 25px 0;
@@ -172,15 +171,15 @@ main {
         z-index: 1;
         position: absolute;
         color: white;
-        background-color: map.get(gv.$colors, "main-purple"); /*Background*/
-        border-radius: 50%; /*make rounded*/
-        padding-right: 5px; /*Space between text and number*/
-        padding-left: 5px; /*Space between text and number*/
-        margin-top: 25px; /*fix the innerspace as needed*/
-        margin-bottom: 16px; /*fix the innerspace as needed*/
+        background-color: map.get(gv.$colors, "main-purple");
+        border-radius: 50%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-top: 25px;
+        margin-bottom: 16px;
         margin-left: -10px;
-        content: counter(item) ""; /*Count the lines*/
-        counter-increment: item /*apply the counter*/
+        content: counter(item) "";
+        counter-increment: item
     }
 }
 
@@ -200,8 +199,6 @@ main {
         position: absolute;
         top: 15px;
         right: 15px;
-        // margin-top: 13px;
-        // margin-left: calc(100% - 123px);
         rect {
             fill: map.get(gv.$colors, "main-green");
             stroke: map.get(gv.$colors, "main-green");

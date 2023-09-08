@@ -97,49 +97,6 @@
     }
 }
 
-// @mixin checkbox__heart {
-//     input[type="checkbox"]
-//     {
-//         position: absolute;
-//         opacity: 0;
-//     }
-//     .checked,
-//     .unchecked {
-//         position: absolute;
-//     }
-//     .unchecked {
-//         z-index: 1;
-//         opacity: 1;
-//     }
-//     .checked {
-//         z-index: 2;
-//         opacity: 0;
-//         background: linear-gradient(
-//             0deg,
-//             #FF79DA,
-//             #9356DC
-//             );
-//             -webkit-background-clip: text;
-//             background-clip: text;
-//             -webkit-text-fill-color: transparent; // !!!
-//             -text-fill-color: transparent;
-//     }
-//     input[type="checkbox"]:checked ~ .checked {
-//         animation: heart-filling 1s forwards;
-//     }
-    
-//     @keyframes heart-filling {
-//         from {
-//             opacity: 0;
-//             transform: scale(0);
-//         }
-//         to {
-//             opacity: 1;
-//             transform: scale(1);
-//         }
-//     }
-// }
-
 @mixin checkbox__heart {
     margin-right: 20px;
     input[type="checkbox"]
